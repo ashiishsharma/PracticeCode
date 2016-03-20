@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>code-practice</groupId>
+    <artifactId>code-practice</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>array</module>
+        <module>binarytree</module>
+        <module>factorial</module>
+        <module>fibonacci</module>
+        <module>gcd</module>
+        <module>graph</module>
+        <module>hashmap</module>
+        <module>lcm</module>
+        <module>linked-list</module>
+        <module>priorityqueue</module>
+        <module>problems</module>
+        <module>queue</module>
+        <module>recursion</module>
+        <module>sorting</module>
+        <module>stack</module>
+        <module>tree</module>
+        <module>comparator-chaining</module>
+        <module>least-recently-used-cache</module>
+        <module>reversing-integer</module>
+    </modules>
+
+
+</project>
