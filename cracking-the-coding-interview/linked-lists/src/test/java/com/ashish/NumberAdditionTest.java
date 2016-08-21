@@ -4,11 +4,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
- * You have two numbers represented by a linked sumResultList,
+ * 2.5
+ * You have two numbers represented by a linked list,
  * where each node contains a single digit. The digits
  * are stored in reverse order, such that the 1's digit is at the
- * head of the sumResultList. Write a function that adds the two numbers and
- * returns the sum as a linked sumResultList.
+ * head of the list. Write a function that adds the two numbers and
+ * returns the sum as a linked list.
  * EXAMPLE
  * Input: (7-> 1 -> 6) + (5 -> 9 -> 2).That is, 617 + 295.
  * Output: 2 -> 1 -> 9.That is, 912.
@@ -40,10 +41,13 @@ public class NumberAdditionTest {
         firstNumber.add(7);
         firstNumber.add(1);
         firstNumber.add(6);
+        firstNumber.add(4);
+        firstNumber.add(7);
 
         secondNumber.add(2);
         secondNumber.add(9);
         secondNumber.add(5);
+        secondNumber.add(8);
 
         sumResultList = new LinkedList<Integer>();
         addReverseOrderNumberLists(firstNumber, secondNumber);
@@ -54,6 +58,7 @@ public class NumberAdditionTest {
 
     /**
      * Solution for reverse Order sum
+     *
      * @param firstNumber
      * @param secondNumber
      */
@@ -76,7 +81,7 @@ public class NumberAdditionTest {
 
 
             Integer sumOfDigit = carryOver + firstDigit + secondDigit;
-            if (sumOfDigit > 10) {
+            if (sumOfDigit >= 10) {
                 carryOver = sumOfDigit / 10;
                 sumOfDigit = sumOfDigit % 10;
             } else {
@@ -85,8 +90,13 @@ public class NumberAdditionTest {
 
             sumResultList.add(sumOfDigit);
 
-            firstNumberDigit = firstNumberDigit.getNext();
-            secondNumberDigit = secondNumberDigit.getNext();
+            if (firstNumberDigit != null) {
+                firstNumberDigit = firstNumberDigit.getNext();
+            }
+
+            if (secondNumberDigit != null) {
+                secondNumberDigit = secondNumberDigit.getNext();
+            }
 
 
         } while (firstNumberDigit != null || secondNumberDigit != null || carryOver > 0);
@@ -94,6 +104,8 @@ public class NumberAdditionTest {
 
     /**
      * Solution for forward Order
+     *
+     * Not implemented yet, will implement later
      */
     @Test
     public void numberForwardAdditionTest() {
@@ -104,13 +116,11 @@ public class NumberAdditionTest {
         firstNumber.add(1);
         firstNumber.add(7);
 
-        secondNumber.add(5);
-        secondNumber.add(9);
         secondNumber.add(2);
+        secondNumber.add(9);
+        secondNumber.add(5);
 
-        sumResultList = new LinkedList<Integer>();
-        addReverseOrderNumberLists(firstNumber, secondNumber);
-
-        System.out.println(sumResultList);
     }
+
+
 }
