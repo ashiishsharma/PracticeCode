@@ -1,16 +1,14 @@
 package com.ashish;
 
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 /**
  * @author Ashish Sharma
  *         Created on 7/2/2015.
  */
 public class LinkedList<T> implements Iterable<T> {
-    private Node head;
-    private int listCount;
+    protected Node head;
+    protected int listCount;
 
     public int size() {
         return listCount;
@@ -127,6 +125,8 @@ public class LinkedList<T> implements Iterable<T> {
                 tempHeadForIteration = tempHeadForIteration.getNext();
                 return elementToReturn;
             }
+
+            public void remove(){}
         };
         return iterator;
     }
