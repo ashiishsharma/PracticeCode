@@ -87,10 +87,13 @@ public class LinkedList<T> implements Iterable<T> {
     }
 
     public boolean remove(int index) {
-        if (index < 1 && index > listCount) {
+        if (index == 1 && listCount == 1) {
+            head = null;
+            listCount--;
+            return true;
+        } else if (index < 1 && index > listCount) {
             return false;
         }
-
         Node tempCurrent = head;
         for (int i = 1; i < index - 1; i++) {
             if (tempCurrent.getNext() == null) {
@@ -126,7 +129,8 @@ public class LinkedList<T> implements Iterable<T> {
                 return elementToReturn;
             }
 
-            public void remove(){}
+            public void remove() {
+            }
         };
         return iterator;
     }

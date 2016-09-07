@@ -11,6 +11,7 @@
     <modules>
         <module>arrays-and-strings</module>
         <module>linked-lists</module>
+        <module>stacks-and-queues</module>
     </modules>
 
     <dependencies>

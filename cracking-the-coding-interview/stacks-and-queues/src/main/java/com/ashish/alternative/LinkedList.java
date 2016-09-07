@@ -1,4 +1,4 @@
-package com.ashish;
+package com.ashish.alternative;
 
 import java.util.Iterator;
 
