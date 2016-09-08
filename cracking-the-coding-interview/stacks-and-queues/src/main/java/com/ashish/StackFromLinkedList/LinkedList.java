@@ -1,4 +1,4 @@
-package com.ashish.alternative;
+package com.ashish.StackFromLinkedList;
 
 import java.util.Iterator;
 

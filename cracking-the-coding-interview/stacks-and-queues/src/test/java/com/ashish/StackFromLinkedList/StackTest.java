@@ -1,6 +1,5 @@
-package com.ashish.alternative;
+package com.ashish.StackFromLinkedList;
 
-import com.ashish.alternative.Stack;
 import org.testng.annotations.Test;
 
 import java.util.EmptyStackException;
