@@ -3,6 +3,8 @@ package com.ashish;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.EmptyStackException;
+
 /**
  * 3.3
  * Imagine a (literal) stack of plates. If the stack gets too high, it might topple.
@@ -26,8 +28,21 @@ public class SetOfStacksTest {
 
     }
 
-    @Test
+    @Test(expectedExceptions = EmptyStackException.class)
     public void testSetOfStacks() {
+        SetOfStacks setOfStacks = new SetOfStacks(2);
+        setOfStacks.push(1);
+        setOfStacks.push(2);
+        setOfStacks.push(3);
+        setOfStacks.push(4);
+        setOfStacks.push(5);
 
+        System.out.println(setOfStacks.pop());
+        System.out.println(setOfStacks.pop());
+        System.out.println(setOfStacks.pop());
+        System.out.println(setOfStacks.pop());
+        System.out.println(setOfStacks.pop());
+        System.out.println(setOfStacks.pop());
+        System.out.println(setOfStacks.pop());
     }
 }
