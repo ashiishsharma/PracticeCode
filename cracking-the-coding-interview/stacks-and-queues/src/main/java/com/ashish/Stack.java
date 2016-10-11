@@ -10,8 +10,8 @@ import java.util.List;
  */
 public class Stack<T> {
 
-    List<T> stackArr;
-    int elementCount;
+    private List<T> stackArr;
+    private int elementCount;
 
     public Stack() {
         stackArr = new ArrayList<T>();
