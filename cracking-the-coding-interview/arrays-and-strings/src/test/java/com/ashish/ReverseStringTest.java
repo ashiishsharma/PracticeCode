@@ -3,7 +3,8 @@ package com.ashish;
 import org.testng.annotations.Test;
 
 /**
- * Implement a function void reversefchar* str) in Cor C++ which reverses a null-terminated
+ * 1.2
+ * Implement a function void reverse(char* str) in C or C++ which reverses a null-terminated
  * string.
  * @author Ashish Sharma on 12/6/2015.
  */

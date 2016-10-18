@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 
 /**
+ * 1.3
  * Given two strings, write a method to decide if one is a permutation of the other
  *
  * @author Ashsih Sharma on 12/8/2015.
