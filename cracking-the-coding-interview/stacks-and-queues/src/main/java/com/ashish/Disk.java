@@ -1,7 +1,7 @@
 package com.ashish;
 
 /**
- * Created by shshaash on 10/12/2016.
+ * Created by Ashish Sharma on 10/12/2016.
  */
 public class Disk {
     private final String diskName;
