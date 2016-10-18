@@ -1,7 +1,7 @@
 package com.ashish;
 
 /**
- * Created by developer on 27-08-2016.
+ * @author Ashish Sharma on 27-08-2016.
  */
 public class CircularLinkedList<T> extends LinkedList<T> {
 

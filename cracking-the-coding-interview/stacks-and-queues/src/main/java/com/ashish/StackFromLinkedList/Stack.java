@@ -3,7 +3,7 @@ package com.ashish.StackFromLinkedList;
 import java.util.EmptyStackException;
 
 /**
- * Created by Ashish Sharma on 9/7/2016.
+ * @author Ashish Sharma on 9/7/2016.
  */
 public class Stack<T> {
 

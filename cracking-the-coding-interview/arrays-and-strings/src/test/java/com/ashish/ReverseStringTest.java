@@ -4,8 +4,10 @@ import org.testng.annotations.Test;
 
 /**
  * 1.2
+ * <p>
  * Implement a function void reverse(char* str) in C or C++ which reverses a null-terminated
  * string.
+ * <p>
  * @author Ashish Sharma on 12/6/2015.
  */
 public class ReverseStringTest {

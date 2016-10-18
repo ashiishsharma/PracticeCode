@@ -7,6 +7,7 @@ import java.util.EmptyStackException;
 
 /**
  * 3.3
+ * <p>
  * Imagine a (literal) stack of plates. If the stack gets too high, it might topple.
  * Therefore, in real life, we would likely start a new stack when the previous
  * stack exceeds some threshold.
@@ -15,11 +16,11 @@ import java.util.EmptyStackException;
  * the previous one exceeds capacity. SetOfStacks.push() and SetOfStacks.
  * pop () should behave identically to a single stack (that is, pop () should return the
  * same values as it would if there were just a single stack).
- * *FOLLOW UP
- * Implement a function popAt(int index) which performs a pop operation on a
+ * <p>FOLLOW UP
+ * <p>Implement a function popAt(int index) which performs a pop operation on a
  * specific sub-stack.
  * <p>
- * Created by Ashish Sharma on 18-09-2016.
+ * @author Ashish Sharma on 18-09-2016.
  */
 public class SetOfStacksTest {
 

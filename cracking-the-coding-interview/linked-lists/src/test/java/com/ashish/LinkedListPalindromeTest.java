@@ -7,9 +7,10 @@ import java.util.Stack;
 
 /**
  * 2.7
+ * <p>
  * Implement a function to check if a linked list is a palindrome
  * <p>
- * Created by developer on 05-09-2016.
+ * @author Ashish Sharma on 05-09-2016.
  */
 public class LinkedListPalindromeTest {
 

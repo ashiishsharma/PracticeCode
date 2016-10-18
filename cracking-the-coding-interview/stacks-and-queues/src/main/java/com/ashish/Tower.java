@@ -1,7 +1,7 @@
 package com.ashish;
 
 /**
- * Created by Ashish Sharma on 10/12/2016.
+ * @author Ashish Sharma on 10/12/2016.
  */
 public class Tower {
 

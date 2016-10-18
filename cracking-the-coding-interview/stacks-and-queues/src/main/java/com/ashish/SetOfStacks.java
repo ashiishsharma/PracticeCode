@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 
 /**
  * Used a stack of stacks for implementing the solution
- * Created by Ashish Sharma on 10/5/2016.
+ * @author Ashish Sharma on 10/5/2016.
  */
 public class SetOfStacks<T> {
     private static final int defaultStackSize = 10;

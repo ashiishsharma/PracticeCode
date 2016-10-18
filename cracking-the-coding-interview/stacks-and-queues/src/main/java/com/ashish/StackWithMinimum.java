@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.EmptyStackException;
 
 /**
- * Created by Ashish Sharma on 13-09-2016.
+ * @author Ashish Sharma on 13-09-2016.
  */
 public class StackWithMinimum<T extends Comparable> extends Stack<T> {
 

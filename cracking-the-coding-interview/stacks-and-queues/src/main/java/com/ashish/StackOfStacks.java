@@ -5,7 +5,7 @@ import java.util.EmptyStackException;
 import java.util.List;
 
 /**
- * Created by Ashish Sharma on 11-10-2016.
+ * @author Ashish Sharma on 11-10-2016.
  */
 public class StackOfStacks<T> {
 

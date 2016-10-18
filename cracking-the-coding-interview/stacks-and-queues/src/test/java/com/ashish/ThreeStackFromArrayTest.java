@@ -7,8 +7,10 @@ import java.util.EmptyStackException;
 
 /**
  * 3.1
+ * <p>
  * Describe how you could use a single array to implement three stacks
- * Created by Ashish Sharma on 9/7/2016.
+ * <p>
+ * @author Ashish Sharma on 9/7/2016.
  */
 public class ThreeStackFromArrayTest {
 

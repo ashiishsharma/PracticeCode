@@ -4,9 +4,11 @@ import org.testng.annotations.Test;
 
 /**
  * 1.7
+ * <p>
  * Write an algorithm such that if an element in an MxN matrix is 0, its entire row and
  * column are set to 0.
- * Created by Ashish Sharma on 12/27/2015.
+ * <p>
+ * @author Ashish Sharma on 12/27/2015.
  */
 public class MatrixToZeroTest {
 

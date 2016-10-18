@@ -11,13 +11,14 @@ import java.util.Set;
 
 /**
  * 2.1
+ * <p>
  * Write code to remove duplicates from an unsorted linked list.
- * FOLLOW UP
- * How would you solve this problem if a temporary buffer is not allowed?
- * Answer : If temporary buffer is not allowed then we can iterate with two pointers: current which iterates
+ * <p>FOLLOW UP
+ * <p>How would you solve this problem if a temporary buffer is not allowed?
+ * <p>Answer : If temporary buffer is not allowed then we can iterate with two pointers: current which iterates
  * through the linked list, and runner which checks all subsequent nodes for duplicates , 0(1) space, but 0(N2) time
- *
- * Created by Ashish Sharma on 12/28/2015.
+ * <p>
+ * @author Ashish Sharma on 12/28/2015.
  */
 public class RemoveDuplicatesTest {
 

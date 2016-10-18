@@ -5,11 +5,12 @@ import org.testng.annotations.Test;
 
 /**
  * 2.4
+ * <p>
  * Write code to partition a linked list around a value x,
  * such that all nodes less than x come before all nodes
  * greater than or equal to x.
  * <p>
- * Created by Ashish Sharma on 1/1/2016.
+ * @author Ashish Sharma on 1/1/2016.
  */
 public class PartitionLinkedListTest {
 

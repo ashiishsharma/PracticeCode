@@ -4,9 +4,10 @@ import org.testng.annotations.Test;
 
 /**
  * 1.1
+ * <p>
  * Implement an algorithm to determine if a string has all unique characters. What if
  * you cannot use additional data structures?
- *
+ * <p>
  * @author Ashish Sharma on 12/2/2015.
  */
 public class UniqueCharacterStringTest {

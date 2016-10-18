@@ -5,10 +5,11 @@ import org.testng.annotations.Test;
 
 /**
  * 2.3
+ * <p>
  * Implement an algorithm to delete a node in the middle of a singly
  * linked list, given only access to that node.
  * <p>
- * Created by Ashish Sharma on 12/30/2015.
+ * @author Ashish Sharma on 12/30/2015.
  */
 public class DeleteNodeTest {
 

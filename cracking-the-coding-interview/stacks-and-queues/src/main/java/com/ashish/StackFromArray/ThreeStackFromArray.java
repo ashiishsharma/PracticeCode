@@ -6,7 +6,8 @@ import java.util.EmptyStackException;
  * Current implementation is fixed size for all the three stacks,
  * In case of request for Dynamic solution , the middle Array Stack Limits can be slided forward
  * and backward.
- * Created by shshaash on 9/12/2016.
+ * <p>
+ * @author shshaash on 9/12/2016.
  */
 public class ThreeStackFromArray<T> {
 

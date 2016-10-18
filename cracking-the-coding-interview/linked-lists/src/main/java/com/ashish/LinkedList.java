@@ -3,8 +3,7 @@ package com.ashish;
 import java.util.Iterator;
 
 /**
- * @author Ashish Sharma
- *         Created on 7/2/2015.
+ * @author Ashish Sharma Created on 7/2/2015.
  */
 public class LinkedList<T> implements Iterable<T> {
     protected Node head;

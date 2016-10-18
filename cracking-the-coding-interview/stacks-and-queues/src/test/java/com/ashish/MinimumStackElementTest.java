@@ -5,11 +5,12 @@ import org.testng.annotations.Test;
 
 /**
  * 3.2
+ * <p>
  * How would you design a stack which, in addition to push and pop, also has a
  * function min which returns the minimum element? Push, pop and min should all
  * operate in 0(1) time.
  * <p>
- * Created by Ashish Sharma on 13-09-2016.
+ * @author Ashish Sharma on 13-09-2016.
  */
 public class MinimumStackElementTest {
 
