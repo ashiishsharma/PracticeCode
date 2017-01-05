@@ -47,4 +47,8 @@ public class Stack<T> {
     public int stackLength() {
         return elementCount;
     }
+
+    public boolean isEmpty() {
+        return elementCount <= 0;
+    }
 }
