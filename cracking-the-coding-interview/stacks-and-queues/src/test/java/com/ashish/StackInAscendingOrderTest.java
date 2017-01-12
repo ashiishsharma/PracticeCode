@@ -59,6 +59,8 @@ public class StackInAscendingOrderTest {
                 continue;
             }
             int elementToPush = inputStack.pop();
+            //insert all the elements of sortedStack in inputStack that is
+            // greater then the inputStack top element
             while (!sortedStack.isEmpty() && sortedStack.peek() > elementToPush) {
                 inputStack.push(sortedStack.pop());
             }
