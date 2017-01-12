@@ -45,4 +45,21 @@ public class QueueUsingTwoStacksTest {
 
     }
 
+    @Test
+    public void testDeQueuePeek() {
+        queueUsingTwoStacks.enqueue(1);
+        queueUsingTwoStacks.enqueue(2);
+        queueUsingTwoStacks.enqueue(3);
+
+        Assert.assertEquals(queueUsingTwoStacks.deQueue(), 1);
+        Assert.assertEquals(queueUsingTwoStacks.peek(), 2);
+        Assert.assertEquals(queueUsingTwoStacks.deQueue(), 2);
+        Assert.assertEquals(queueUsingTwoStacks.peek(), 3);
+        Assert.assertEquals(queueUsingTwoStacks.deQueue(), 3);
+        Assert.assertEquals(queueUsingTwoStacks.deQueue(), null);
+        queueUsingTwoStacks.enqueue(4);
+        Assert.assertEquals(queueUsingTwoStacks.deQueue(), 4);
+
+    }
+
 }

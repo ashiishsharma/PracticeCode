@@ -29,15 +29,24 @@ public class AnimalShelter {
     }
 
     public Animal dequeueAny() {
+        Animal dog = (Animal) dogQueue.peek();
+        Animal cat = (Animal) catQueue.peek();
 
-        return null;
+        Animal olderAnimal;
+        if (dog.isOlderThan(cat)) {
+            olderAnimal = (Animal) dogQueue.dequeue();
+        } else {
+            olderAnimal = (Animal) catQueue.dequeue();
+        }
+
+        return olderAnimal;
     }
 
     public Dog dequeueDog() {
-        return null;
+        return (Dog) dogQueue.dequeue();
     }
 
     public Cat dequeueCat() {
-        return null;
+        return (Cat) catQueue.dequeue();
     }
 }

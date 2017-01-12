@@ -49,14 +49,20 @@ public class Queue<T> {
                 tempNode = tempNode.getNext();
             }
 
-//            head = new Node(null, prevNode.getElement());
             head = prevNode;
             head.setNext(null);
-//            if (prevNode != null) {
-//                prevNode.setNext(head);
-//            }
         }
         queueCount--;
+        return element;
+    }
+
+    public T peek() {
+        T element;
+        if (head == null && tail == null) {
+            return null;
+        } else {
+            element = (T) head.getElement();
+        }
         return element;
     }
 

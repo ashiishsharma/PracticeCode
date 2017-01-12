@@ -30,6 +30,6 @@ public abstract class Animal {
     }
 
     boolean isOlderThan(Animal animal) {
-        return this.getArrivalOrderAge() > animal.getArrivalOrderAge();
+        return this.getArrivalOrderAge() < animal.getArrivalOrderAge();
     }
 }

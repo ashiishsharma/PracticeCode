@@ -52,5 +52,26 @@ public class AnimalShelterTest {
         animalShelter.enqueue(cat3);
 
         Assert.assertEquals(animalShelter.dequeueAny().getName(), cat1.getName());
+        Assert.assertEquals(animalShelter.dequeueAny().getName(), dog1.getName());
+        Assert.assertEquals(animalShelter.dequeueAny().getName(), cat2.getName());
+    }
+
+    @Test
+    public void testAdoptCatOrDog() {
+        Animal cat1 = new Cat("cat1");
+        Animal dog1 = new Dog("dog1");
+        Animal cat2 = new Cat("cat2");
+        Animal dog2 = new Dog("dog2");
+        Animal cat3 = new Cat("cat3");
+        animalShelter.enqueue(cat1);
+        animalShelter.enqueue(dog1);
+        animalShelter.enqueue(cat2);
+        animalShelter.enqueue(dog2);
+        animalShelter.enqueue(cat3);
+
+        Assert.assertEquals(animalShelter.dequeueCat().getName(), cat1.getName());
+        Assert.assertEquals(animalShelter.dequeueDog().getName(), dog1.getName());
+        Assert.assertEquals(animalShelter.dequeueCat().getName(), cat2.getName());
+        Assert.assertEquals(animalShelter.dequeueDog().getName(), dog2.getName());
     }
 }

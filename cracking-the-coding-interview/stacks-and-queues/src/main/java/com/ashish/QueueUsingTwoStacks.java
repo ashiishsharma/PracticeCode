@@ -36,4 +36,19 @@ public class QueueUsingTwoStacks<T> {
         }
         return element;
     }
+
+    public T peek() {
+        T element = null;
+        if (!deQueueStack.isEmpty()) {
+            element = deQueueStack.peek();
+        } else if (!enQueueStack.isEmpty()) {
+            while (!enQueueStack.isEmpty()) {
+                deQueueStack.push(enQueueStack.pop());
+            }
+            if (!deQueueStack.isEmpty()) {
+                element = deQueueStack.peek();
+            }
+        }
+        return element;
+    }
 }
