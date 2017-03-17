@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 /**
  * 4.1
  * <p>
- * Solution : Efficient, O(n), O(H)
+ * Solution : Inefficient, O(n2)
  * <p>
  * Implement a function to check if a binary tree is balanced.
  * For the purposes of this question,
@@ -15,11 +15,11 @@ import org.testng.annotations.Test;
  * subtrees of any node never differ by more than one.
  * <p>
  *
- * @author Ashish Sharma on 3/16/2017.
+ * @author Ashish Sharma on 1/27/2017.
  *         <p>
- * @since 3/16/2017
+ * @since 1/27/2017
  */
-public class BinaryTreeBalancedTest {
+public class BinaryTreeBalancedTest1 {
 
     private BinaryTree binaryTree1;
     private BinaryTree binaryTree2;
@@ -51,7 +51,7 @@ public class BinaryTreeBalancedTest {
             if (Math.abs(treeHeight) > 1) {
                 isTreeBalanced = false;
                 return isTreeBalanced;
-            } else {
+            }else {
                 isTreeBalanced = isBinaryTreeBalanced(root.getLeft()) && isBinaryTreeBalanced(root.getRight());
                 return isTreeBalanced;
             }

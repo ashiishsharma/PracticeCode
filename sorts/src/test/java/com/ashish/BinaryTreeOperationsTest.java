@@ -40,6 +40,9 @@ public class BinaryTreeOperationsTest {
         return binaryTree;
     }
 
+    /**
+     * The tree is Binary Search Tree
+     */
     private BinaryTree getBinaryTree2() {
         BinaryTreeNode root = new BinaryTreeNode(null, 15);
         BinaryTreeNode binaryTreeNode6 = new BinaryTreeNode(root, 6);
@@ -93,6 +96,41 @@ public class BinaryTreeOperationsTest {
     }
 
     @Test
+    public void preOrderTreeWalkTest() {
+        binaryTree = getBinaryTree2();
+        BinaryTreeNode binaryTreeNode = binaryTree.getRoot();
+        preOrderTreeWalk(binaryTreeNode);
+
+    }
+
+    private void preOrderTreeWalk(BinaryTreeNode binaryTreeNode) {
+        if (binaryTreeNode != null) {
+            System.out.println(binaryTreeNode.getValue() + ",");
+            preOrderTreeWalk(binaryTreeNode.getLeft());
+            preOrderTreeWalk(binaryTreeNode.getRight());
+        }
+    }
+
+    @Test
+    public void postOrderTreeWalkTest() {
+        binaryTree = getBinaryTree2();
+        BinaryTreeNode binaryTreeNode = binaryTree.getRoot();
+        postOrderTreeWalk(binaryTreeNode);
+
+    }
+
+    private void postOrderTreeWalk(BinaryTreeNode binaryTreeNode) {
+        if (binaryTreeNode != null) {
+            postOrderTreeWalk(binaryTreeNode.getLeft());
+            postOrderTreeWalk(binaryTreeNode.getRight());
+            System.out.println(binaryTreeNode.getValue() + ",");
+        }
+    }
+
+    /**
+     * The tree is Binary Search Tree
+     */
+    @Test
     public void binaryTreeSearchTest() {
         binaryTree = getBinaryTree2();
         BinaryTreeNode binaryTreeNode = binaryTree.getRoot();
@@ -116,6 +154,9 @@ public class BinaryTreeOperationsTest {
         }
     }
 
+    /**
+     * The tree is Binary Search Tree
+     */
     @Test
     public void binaryTreeSearchIterativeTest() {
         binaryTree = getBinaryTree2();
@@ -141,6 +182,9 @@ public class BinaryTreeOperationsTest {
         return binaryTreeNode;
     }
 
+    /**
+     * The tree is Binary Search Tree
+     */
     @Test
     public void binaryTreeMinimumTest() {
         binaryTree = getBinaryTree2();
@@ -160,6 +204,9 @@ public class BinaryTreeOperationsTest {
         return binaryTreeNode;
     }
 
+    /**
+     * The tree is Binary Search Tree
+     */
     @Test
     public void binaryTreeMaximumTest() {
         binaryTree = getBinaryTree2();
@@ -179,6 +226,15 @@ public class BinaryTreeOperationsTest {
         return binaryTreeNode;
     }
 
+    /**
+     * Given a node in a binary search tree, sometimes we need to find its successor
+     * in the sorted order determined by an inorder tree walk.
+     * If all keys are distinct, the Binary Search Trees successor of a node x is
+     * the node with the smallest key greater than x:key.
+     * <p>
+     * The structure of a binary search tree allows us to determine the successor of a node
+     * without ever comparing keys.
+     */
     @Test
     public void binaryTreeSuccessorTest() {
         binaryTree = getBinaryTree2();
