@@ -1,6 +1,5 @@
 package com.ashish;
 
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -32,7 +31,7 @@ public class BinaryTreeBalancedTest {
 
     @Test
     public void testCalculateBinaryTreeHeight() {
-        int i = getHeightForBinaryTree(binaryTree2.getRoot());
+        int i = getHeightForBinaryTree(binaryTree1.getRoot());
         System.out.println("Height of binary tree: " + i);
     }
 
@@ -43,29 +42,37 @@ public class BinaryTreeBalancedTest {
 
     private boolean isBinaryTreeBalanced(BinaryTreeNode root) {
         boolean isTreeBalanced = false;
-        if (root == null) {
+        if (getHeightForBinaryTree(root) != -1) {
             isTreeBalanced = true;
-            return isTreeBalanced;
-        } else {
-            int treeHeight = getHeightForBinaryTree(root.getLeft()) - getHeightForBinaryTree(root.getRight());
-            if (Math.abs(treeHeight) > 1) {
-                isTreeBalanced = false;
-                return isTreeBalanced;
-            } else {
-                isTreeBalanced = isBinaryTreeBalanced(root.getLeft()) && isBinaryTreeBalanced(root.getRight());
-                return isTreeBalanced;
-            }
         }
+        return isTreeBalanced;
     }
 
     private int getHeightForBinaryTree(BinaryTreeNode binaryTreeNode) {
         int height = 0;
+        int leftHeight = 0;
+        int rightHeight = 0;
         if (binaryTreeNode == null) {
             return 0;
-        } else {
-            height = Math.max(getHeightForBinaryTree(binaryTreeNode.getLeft()), getHeightForBinaryTree(binaryTreeNode.getRight())) + 1;
         }
-        return height;
+
+        leftHeight = getHeightForBinaryTree(binaryTreeNode.getLeft());
+        if (leftHeight == -1) {
+            return -1;
+        }
+
+        rightHeight = getHeightForBinaryTree(binaryTreeNode.getRight());
+        if (rightHeight == -1) {
+            return -1;
+        }
+
+        int heightDiff = leftHeight - rightHeight;
+        if (Math.abs(heightDiff) > 1) {
+            return -1;
+        } else {
+            height = Math.max(leftHeight, rightHeight) + 1;
+            return height;
+        }
     }
 
     private BinaryTree getBinaryTree2() {
