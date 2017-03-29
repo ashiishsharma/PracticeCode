@@ -2,6 +2,9 @@ package com.ashish;
 
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 4.4
  * <p>
@@ -16,25 +19,12 @@ import org.testng.annotations.Test;
 public class BinaryTreeToLinkedListTest {
 
     @Test
-    public void printQueueTest() {
-        QueueForBFS queueForBFS = new QueueForBFS();
-        queueForBFS.enqueue(1);
-        queueForBFS.enqueue(2);
-        queueForBFS.enqueue(3);
-        queueForBFS.enqueue(4);
-        queueForBFS.enqueue(5);
-        queueForBFS.enqueue(6);
-
-        System.out.println(queueForBFS.toString());
-    }
-
-    @Test
     public void BFSTest() {
         binaryTree = binarySearchTreeCreationWithOutSeparateInsertionMethod();
-        BFSForBinaryTree(binaryTree.getRoot());
+        List<LinkedList<BinaryTreeNodeForBFS>> arrayListForNodesOnSameHeight = BFSForBinaryTree(binaryTree.getRoot());
     }
 
-    private void BFSForBinaryTree(BinaryTreeNodeForBFS root) {
+    private List<LinkedList<BinaryTreeNodeForBFS>> BFSForBinaryTree(BinaryTreeNodeForBFS root) {
 
         root.setNodeColor(BinaryTreeNodeForBFS.NodeColor.Gray);
         root.setDistanceFromRoot(0);
@@ -42,22 +32,50 @@ public class BinaryTreeToLinkedListTest {
         QueueForBFS<BinaryTreeNodeForBFS> bfsQueue = new QueueForBFS<BinaryTreeNodeForBFS>();
         bfsQueue.enqueue(root);
 
+        // Get nodes available on same height in a queue
+        QueueForBFS<BinaryTreeNodeForBFS> printBFSQueue = new QueueForBFS<BinaryTreeNodeForBFS>();
+        printBFSQueue.enqueue(root);
+
         while (bfsQueue.getQueueCount() != 0) {
-            System.out.println(bfsQueue.toString());
             BinaryTreeNodeForBFS binaryTreeNodeForBFS = bfsQueue.dequeue();
-            if (binaryTreeNodeForBFS.getLeft().getNodeColor() == BinaryTreeNodeForBFS.NodeColor.White) {
+            if (binaryTreeNodeForBFS.getLeft() != null && binaryTreeNodeForBFS.getLeft().getNodeColor() == BinaryTreeNodeForBFS.NodeColor.White) {
                 binaryTreeNodeForBFS.getLeft().setNodeColor(BinaryTreeNodeForBFS.NodeColor.Gray);
                 binaryTreeNodeForBFS.getLeft().setDistanceFromRoot(binaryTreeNodeForBFS.getDistanceFromRoot() + 1);
                 bfsQueue.enqueue(binaryTreeNodeForBFS.getLeft());
+
+                // Get nodes available on same height in a queue
+                printBFSQueue.enqueue(binaryTreeNodeForBFS.getLeft());
             }
 
-            if (binaryTreeNodeForBFS.getRight().getNodeColor() == BinaryTreeNodeForBFS.NodeColor.White) {
+            if (binaryTreeNodeForBFS.getRight() != null && binaryTreeNodeForBFS.getRight().getNodeColor() == BinaryTreeNodeForBFS.NodeColor.White) {
                 binaryTreeNodeForBFS.getRight().setNodeColor(BinaryTreeNodeForBFS.NodeColor.Gray);
                 binaryTreeNodeForBFS.getRight().setDistanceFromRoot(binaryTreeNodeForBFS.getDistanceFromRoot() + 1);
                 bfsQueue.enqueue(binaryTreeNodeForBFS.getRight());
+
+                // Get nodes available on same height in a queue
+                printBFSQueue.enqueue(binaryTreeNodeForBFS.getRight());
             }
             binaryTreeNodeForBFS.setNodeColor(BinaryTreeNodeForBFS.NodeColor.Black);
         }
+
+        // Creating required linked list for each height level
+        List<LinkedList<BinaryTreeNodeForBFS>> arrayListForNodesOnSameHeight = new ArrayList<LinkedList<BinaryTreeNodeForBFS>>();
+        LinkedList<BinaryTreeNodeForBFS> nodesOnSameHeight = new LinkedList<BinaryTreeNodeForBFS>();
+        arrayListForNodesOnSameHeight.add(nodesOnSameHeight);
+
+        do {
+            BinaryTreeNodeForBFS binaryTreeNodeForBFS = printBFSQueue.dequeue();
+            if (binaryTreeNodeForBFS.getDistanceFromRoot() == root.getDistanceFromRoot() + 1) {
+                System.out.println();
+                nodesOnSameHeight = new LinkedList<BinaryTreeNodeForBFS>();
+                arrayListForNodesOnSameHeight.add(nodesOnSameHeight);
+                root = binaryTreeNodeForBFS;
+            }
+            System.out.print(binaryTreeNodeForBFS.getValue() + " ");
+            nodesOnSameHeight.add(binaryTreeNodeForBFS);
+        } while (printBFSQueue.getQueueCount() > 0);
+
+        return arrayListForNodesOnSameHeight;
     }
 
     private int[] sortedArray;
@@ -92,8 +110,8 @@ public class BinaryTreeToLinkedListTest {
 
     private BinaryTreeNodeForBFS[] getSortedBinaryTreeNodeArray() {
         //Test with both arrays
-        sortedArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-//        sortedArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        sortedArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        sortedArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         binaryTreeNodeArray = new BinaryTreeNodeForBFS[sortedArray.length];
 
@@ -103,5 +121,18 @@ public class BinaryTreeToLinkedListTest {
         }
 
         return binaryTreeNodeArray;
+    }
+
+    @Test
+    public void printQueueTest() {
+        QueueForBFS queueForBFS = new QueueForBFS();
+        queueForBFS.enqueue(1);
+        queueForBFS.enqueue(2);
+        queueForBFS.enqueue(3);
+        queueForBFS.enqueue(4);
+        queueForBFS.enqueue(5);
+        queueForBFS.enqueue(6);
+
+        System.out.println(queueForBFS.toString());
     }
 }
