@@ -93,6 +93,13 @@ public class GraphVertex {
     }
 
     public enum VertexColor {
-        White, Gray, Black;
+        //UnVisited
+        White,
+
+        //Visiting
+        Gray,
+
+        //Visited
+        Black;
     }
 }

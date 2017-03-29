@@ -5,14 +5,14 @@ package com.ashish;
  *         Created on 7/2/2015.
  */
 public class Queue<T> {
-    Node head;
-    Node tail;
+    private Node head;
+    private Node tail;
 
     public int getQueueCount() {
         return queueCount;
     }
 
-    int queueCount;
+    private int queueCount;
 
     public Queue() {
         head = null;
