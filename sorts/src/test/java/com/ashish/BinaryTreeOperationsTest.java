@@ -257,6 +257,10 @@ public class BinaryTreeOperationsTest {
         }
         BinaryTreeNode binaryTreeNodeSuccessor = binaryTreeNode.getParent();
 
+        //Special case : When the Node whose successor to be found is:
+        // 1. leaf node without any further nodes
+        // 2. The leaf node itself is the right node of it's parent
+        // In such a case the parent node need to be iterated till one reaches the next parent
         while (binaryTreeNodeSuccessor != null && binaryTreeNode.getValue() == binaryTreeNodeSuccessor.getRight().getValue()) {
             binaryTreeNode = binaryTreeNodeSuccessor;
             binaryTreeNodeSuccessor = binaryTreeNodeSuccessor.getParent();
@@ -287,6 +291,10 @@ public class BinaryTreeOperationsTest {
         }
         BinaryTreeNode binaryTreeNodePredecessor = binaryTreeNode.getParent();
 
+        //Special case : When the Node whose successor to be found is:
+        // 1. leaf node without any further nodes
+        // 2. The leaf node itself is the left node of it's parent
+        // In such a case the parent node need to be iterated till one reaches the next parent
         while (binaryTreeNodePredecessor != null && binaryTreeNode.getValue() == binaryTreeNodePredecessor.getLeft().getValue()) {
             binaryTreeNode = binaryTreeNodePredecessor;
             binaryTreeNodePredecessor = binaryTreeNodePredecessor.getParent();
