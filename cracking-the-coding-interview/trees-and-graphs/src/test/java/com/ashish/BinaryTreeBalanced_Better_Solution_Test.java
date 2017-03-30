@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
  *         <p>
  * @since 1/27/2017
  */
-public class BinaryTreeBalancedTest1 {
+public class BinaryTreeBalanced_Better_Solution_Test {
 
     private BinaryTree binaryTree1;
     private BinaryTree binaryTree2;
