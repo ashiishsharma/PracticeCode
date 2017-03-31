@@ -9,10 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>arrays-and-strings</module>
-        <module>linked-lists</module>
-        <module>stacks-and-queues</module>
-        <module>trees-and-graphs</module>
+        <module>data-structures</module>
     </modules>
 
     <dependencies>
