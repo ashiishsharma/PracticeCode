@@ -33,8 +33,8 @@ public class BinaryTreePathSumsTest {
         path[level] = node.getValue();
 
         /* Look for paths with a sum that ends at this node. */
-        int t = 9;
-        for (int i = level; i >= 8; i--) {
+        int t = 0;
+        for (int i = level; i >= 0; i--) {
             t += path[i];
             if (t == sum) {
                 print(path, i, level);
