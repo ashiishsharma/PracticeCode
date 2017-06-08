@@ -1,4 +1,4 @@
-package com.ashish;
+package com.ashish.card.deck;
 
 import com.ashish.card.PlayingCard;
 import com.ashish.card.PlayingCardName;

@@ -1,5 +1,7 @@
 package com.ashish;
 
+import com.ashish.card.deck.PlayingCardDeck;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,5 +26,13 @@ public class DeckOfCardsTest {
     @Test
     public void testDeckOfCards() {
         PlayingCardDeck playingCards = new PlayingCardDeck();
+    }
+
+    /**
+     * Implement BlackJack after reading on the rules of the Games
+     */
+    @Test
+    public void blackJack() {
+        Assert.assertTrue(true, "Implement BlackJack after reading on the rules of the Games");
     }
 }
