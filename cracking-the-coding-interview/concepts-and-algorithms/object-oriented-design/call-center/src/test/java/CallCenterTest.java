@@ -1,7 +1,4 @@
-package com.ashish;
-
-
-import com.ashish.com.ashish.call_center.*;
+import com.ashish.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

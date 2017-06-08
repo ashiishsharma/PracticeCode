@@ -1,6 +1,4 @@
-package com.ashish.com.ashish.call_center;
-
-import com.ashish.com.ashish.call_center.Call;
+package com.ashish;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

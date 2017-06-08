@@ -1,4 +1,4 @@
-package com.ashish.com.ashish.call_center;
+package com.ashish;
 
 /**
  * Created by Ashish Sharma on 6/7/2017.
