@@ -5,6 +5,20 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+/**
+ * 8.4
+ * <p>
+ * Design a parking lot using object-oriented principles.
+ * <p>
+ * <p>Solution</p>
+ * <p>The parking slots are the identifiers of parking lot,
+ * as soon as a parking slot is provided,
+ * the vehicle is capable to guide and park itself</p>
+ *
+ * @author Ashish Sharma on 9/19/2017.
+ * <p>
+ * @since 9/19/2017.
+ */
 public class ParkingLotTest {
 
     private ParkingLot parkingLot;
