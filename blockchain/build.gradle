@@ -1,0 +1,54 @@
+group 'com.ashish'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    /*mavenLocal()
+    maven{
+        url "C:\\Users\\shshaash.ORADEV\\MavenRepository3.3.9"
+    }*/
+}
+
+dependencies {
+    compile([group: 'org.mockito', name: 'mockito-all', version: '1.10.19'],
+            [group: 'commons-codec', name: 'commons-codec', version: '1.10'],
+            [group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'],
+            [group: 'commons-io', name: 'commons-io', version: '2.5'],
+            [group: 'commons-collections', name: 'commons-collections', version: '3.2.1'],
+            [group: 'com.google.guava', name: 'guava', version: '19.0'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.7.4'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.7.4'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.7.4'],
+            [group: 'com.fasterxml.jackson.module', name: 'jackson-module-jsonSchema', version: '2.7.4'],
+            [group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.4.2'],
+            [group: 'com.squareup.okhttp3', name: 'mockwebserver', version: '3.4.1'],
+            [group: 'org.asynchttpclient', name: 'async-http-client', version: '2.0.15'],
+            [group: 'org.jboss.resteasy', name: 'resteasy-jaxrs', version: '3.0.15.Final'],
+            [group: 'javax.servlet', name: 'servlet-api', version: '2.5']
+
+    )
+    testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
+}
+
+test {
+    useTestNG()
+    testLogging.showCauses = true;
+    testLogging.showExceptions = true;
+    testLogging.showStackTraces = true;
+    testLogging.showStandardStreams = true;
+    testLogging.exceptionFormat = 'full';
+    testLogging.events "started", "passed", "skipped", "failed", "standardOut", "standardError";
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports after running tests."
+    additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
+}
