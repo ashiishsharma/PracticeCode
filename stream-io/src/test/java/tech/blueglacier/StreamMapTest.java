@@ -57,7 +57,7 @@ public class StreamMapTest {
 
     @Test
     public void getPrimitiveStreamTest() {
-        List<Double> doubleList = Arrays.asList(7.0, 18.0, 10.0, 24.0, 17.0, 5.0);
+        List<Double> doubleList = Arrays.asList(7.49, 18.78, 10.21, 24.34, 17.89, 5.3);
         System.out.println("Original values in list : ");
         doubleList.stream().forEach((a) -> {
             System.out.print(a + " ");
