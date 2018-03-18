@@ -6,13 +6,15 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 import java.nio.channels.SeekableByteChannel;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class nio {
+public class NIORead {
 
     @BeforeMethod
     public void init() {
@@ -46,6 +48,29 @@ public class nio {
             System.out.println();
         } catch (IOException e) {
             System.out.println("IO error : " + e);
+        }
+    }
+
+    @Test
+    public void mappedChannelRead() {
+        long fileSize;
+        Path filePath = null;
+
+        try {
+            ClassLoader classLoader = getClass().getClassLoader();
+            filePath = Paths.get(classLoader.getResource("nio-folder/test.txt").toURI());
+        } catch (InvalidPathException | URISyntaxException e) {
+            System.out.println("Path error :" + e);
+        }
+        try (FileChannel fileChannel = (FileChannel) Files.newByteChannel(filePath)) {
+            fileSize = fileChannel.size();
+            MappedByteBuffer mappedByteBuffer = fileChannel.map(FileChannel.MapMode.READ_ONLY, 0, fileSize);
+            for (int i = 0; i < fileSize; i++) {
+                System.out.print((char) mappedByteBuffer.get());
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
