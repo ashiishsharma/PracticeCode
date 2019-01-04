@@ -18,6 +18,8 @@
         <module>parking-lot</module>
         <module>online-book-reader-system</module>
         <module>jigsaw</module>
+        <module>chat-server</module>
+        <module>Othello</module>
     </modules>
 
 
