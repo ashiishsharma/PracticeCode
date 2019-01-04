@@ -20,6 +20,7 @@
         <module>jigsaw</module>
         <module>chat-server</module>
         <module>Othello</module>
+        <module>circular-array</module>
     </modules>
 
 
