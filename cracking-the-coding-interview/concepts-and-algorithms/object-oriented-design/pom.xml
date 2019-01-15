@@ -21,6 +21,9 @@
         <module>chat-server</module>
         <module>Othello</module>
         <module>circular-array</module>
+        <module>minesweeper</module>
+        <module>in-memory-filesystem</module>
+        <module>hash-table</module>
     </modules>
 
 
