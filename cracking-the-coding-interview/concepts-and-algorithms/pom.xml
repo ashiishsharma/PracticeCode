@@ -15,5 +15,6 @@
         <module>brain-teasers</module>
         <module>mathematics-and-probability</module>
         <module>object-oriented-design</module>
+        <module>recursion-and-dynamic-programming</module>
     </modules>
 </project>
