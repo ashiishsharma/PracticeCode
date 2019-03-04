@@ -12,11 +12,6 @@
     <artifactId>recursion-and-dynamic-programming</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>triple-step</module>
-        <module>robot-in-a-grid</module>
-        <module>magic-index</module>
-        <module>power-set</module>
-        <module>recursive-multiply</module>
     </modules>
 
 

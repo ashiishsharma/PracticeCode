@@ -31,7 +31,16 @@ public class RecursiveMultiplyTest {
 
     @Test
     public void testRecursiveMultiply() {
-        recursiveMultiply.minProduct();
+        System.out.println(recursiveMultiply.minProduct(8, 7));
+    }
 
+    @Test
+    public void testRecursiveMultiplyDynamicProgramming() {
+        System.out.println(recursiveMultiply.minProductDynamicProgramming(8, 7));
+    }
+
+    @Test
+    public void testRecursiveMultiplyFast() {
+        System.out.println(recursiveMultiply.minProductFast(8, 7));
     }
 }
