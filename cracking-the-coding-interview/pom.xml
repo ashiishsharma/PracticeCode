@@ -11,6 +11,7 @@
     <modules>
         <module>data-structures</module>
         <module>concepts-and-algorithms</module>
+        <module>system-design-and-scalability</module>
     </modules>
 
     <dependencies>
