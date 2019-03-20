@@ -1,5 +1,11 @@
 package com.ashish;
 
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <B>9.1</B> ,  <B>Cracking The Coding Interview : Edition : 6</B>
  * <p>
@@ -22,4 +28,20 @@ package com.ashish;
  * @since 03/07/2019.
  */
 public class StockDataTest {
+
+    @BeforeMethod
+    public void init() {
+
+    }
+
+    @Test
+    public void testList() {
+        List<Integer> arrayInt = new ArrayList<>();
+        arrayInt.add(0, 1);
+        arrayInt.add(1, 2);
+//        arrayInt.set(0, 1);
+//        arrayInt.set(1, 2);
+    }
+
 }
+
