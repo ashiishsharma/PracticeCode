@@ -34,14 +34,6 @@ public class StockDataTest {
 
     }
 
-    @Test
-    public void testList() {
-        List<Integer> arrayInt = new ArrayList<>();
-        arrayInt.add(0, 1);
-        arrayInt.add(1, 2);
-//        arrayInt.set(0, 1);
-//        arrayInt.set(1, 2);
-    }
 
 }
 
