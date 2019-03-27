@@ -1,5 +1,7 @@
 package com.ashish;
 
+import org.testng.annotations.BeforeMethod;
+
 /**
  * <B>Cracking The Coding Interview : Edition : 6</B>
  * <p>
@@ -19,4 +21,16 @@ package com.ashish;
  * @since 03/05/2019.
  */
 public class BooleanEvaluationTest {
+
+    private BooleanEvaluation booleanEvaluation;
+
+    @BeforeMethod
+    public void init(){
+        booleanEvaluation = new BooleanEvaluation();
+    }
+
+    @BeforeMethod
+    public void testBooleanEvaluation(){
+
+    }
 }

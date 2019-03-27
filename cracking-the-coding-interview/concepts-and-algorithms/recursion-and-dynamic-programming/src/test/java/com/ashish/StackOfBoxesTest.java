@@ -22,13 +22,16 @@ import org.testng.annotations.Test;
  */
 public class StackOfBoxesTest {
 
+    private BoxStack boxStack;
+
     @BeforeMethod
     public void init() {
-
+        boxStack = new BoxStack();
     }
 
     @Test
     public void testStackOfBoxes() {
+
 
     }
 
