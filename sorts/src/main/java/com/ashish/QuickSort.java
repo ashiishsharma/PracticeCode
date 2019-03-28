@@ -3,6 +3,8 @@ package com.ashish;
 /**
  * @author Ashish Sharma
  *         Created on 7/5/2015.
+ *
+ *  Hint : Refer Coremen, The trick revolves around finding pivot element.
  */
 public class QuickSort {
     public int[] sort(int[] arr) {
