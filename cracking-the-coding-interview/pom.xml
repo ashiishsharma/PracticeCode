@@ -12,6 +12,7 @@
         <module>data-structures</module>
         <module>concepts-and-algorithms</module>
         <module>system-design-and-scalability</module>
+        <module>sorting-and-searching</module>
     </modules>
 
     <dependencies>
