@@ -1,5 +1,8 @@
 package com.ashish;
 
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 /**
  * <B>10.1</B> ,  <B>Cracking The Coding Interview : Edition : 6</B>
  * <p>
@@ -12,4 +15,16 @@ package com.ashish;
  * @since 03/28/2019.
  */
 public class SortedMergeTest {
+
+    SortedMerge sortedMerge;
+
+    @BeforeMethod
+    public void init(){
+        sortedMerge = new SortedMerge();
+    }
+
+    @Test
+    public void testSortedMerge(){
+
+    }
 }
