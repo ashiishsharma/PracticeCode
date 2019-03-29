@@ -13,6 +13,7 @@
         <module>concepts-and-algorithms</module>
         <module>system-design-and-scalability</module>
         <module>sorting-and-searching</module>
+        <module>testing</module>
     </modules>
 
     <dependencies>

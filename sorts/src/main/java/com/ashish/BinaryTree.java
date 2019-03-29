@@ -13,7 +13,7 @@ public class BinaryTree {
         this.root = root;
     }
 
-    BinaryTreeNode root;
+    private BinaryTreeNode root;
 
     public BinaryTree(BinaryTreeNode root) {
         this.root = root;
