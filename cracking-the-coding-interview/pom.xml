@@ -15,6 +15,7 @@
         <module>sorting-and-searching</module>
         <module>testing</module>
         <module>java</module>
+        <module>threads-and-locks</module>
     </modules>
 
     <dependencies>
