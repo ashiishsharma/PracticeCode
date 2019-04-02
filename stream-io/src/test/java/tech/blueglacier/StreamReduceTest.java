@@ -8,6 +8,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Refer : https://www.tutorialspoint.com/java8/index.htm
+ * Refer : https://www.tutorialspoint.com/java9/index.htm
+ */
 public class StreamReduceTest {
 
     @BeforeMethod

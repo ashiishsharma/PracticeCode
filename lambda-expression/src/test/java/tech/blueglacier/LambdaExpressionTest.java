@@ -6,6 +6,10 @@ import org.testng.annotations.Test;
 
 import java.util.function.UnaryOperator;
 
+/**
+ * Refer : https://www.tutorialspoint.com/java8/index.htm
+ * Refer : https://www.tutorialspoint.com/java9/index.htm
+ */
 public class LambdaExpressionTest {
 
     @BeforeMethod
