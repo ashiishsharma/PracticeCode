@@ -16,7 +16,7 @@ public class SynchronizedPrintingThreadTest {
     public void synchronizedPrinting() throws InterruptedException {
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         Print print = new Print();
-        executorService.execute(new PrintStatment(print));
+        executorService.execute(new PrintStatement(print));
         executorService.execute(new PrintName(print));
         TimeUnit.MILLISECONDS.sleep(100);
         executorService.shutdown();
@@ -25,39 +25,39 @@ public class SynchronizedPrintingThreadTest {
     public class Print {
 
         private boolean isNamePrinted;
-        private boolean isStatmentPrinted;
+        private boolean isStatementPrinted;
 
         public Print() {
             isNamePrinted = true;
-            isStatmentPrinted = false;
+            isStatementPrinted = false;
         }
 
-        public synchronized void printStatment() throws InterruptedException {
+        public synchronized void printStatement() throws InterruptedException {
             while (!isNamePrinted) {
                 wait();
             }
             System.out.println("My name is");
-            isStatmentPrinted = true;
+            isStatementPrinted = true;
             isNamePrinted = false;
             notifyAll();
         }
 
         public synchronized void printName() throws InterruptedException {
-            while (!isStatmentPrinted) {
+            while (!isStatementPrinted) {
                 wait();
             }
             System.out.println("Ashish Sharma");
             isNamePrinted = true;
-            isStatmentPrinted = false;
+            isStatementPrinted = false;
             notifyAll();
         }
     }
 
-    public class PrintStatment implements Runnable {
+    public class PrintStatement implements Runnable {
 
         private Print print;
 
-        public PrintStatment(Print print) {
+        public PrintStatement(Print print) {
             this.print = print;
         }
 
@@ -66,7 +66,7 @@ public class SynchronizedPrintingThreadTest {
             do {
                 try {
                     if (!Thread.interrupted()) {
-                        print.printStatment();
+                        print.printStatement();
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
