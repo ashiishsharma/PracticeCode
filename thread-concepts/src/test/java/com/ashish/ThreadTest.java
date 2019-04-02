@@ -1,7 +1,7 @@
 package com.ashish;
 
 import org.testng.annotations.Test;
-import sun.awt.windows.ThemeReader;
+//import sun.awt.windows.ThemeReader;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +22,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author Ashish Sharma
  *         Created on 8/30/2015.
+ *         Based on Thinking In Java by Bruce Eckel 4th Edition
+ *         Chapter : Concurrency
  */
 public class ThreadTest {
     private static final int threadCount = 5;
@@ -257,6 +259,7 @@ public class ThreadTest {
         for (int i = 0; i < 5; i++) {
             Thread thread = new Thread(runnable);
             thread.start();
+            thread.join();
         }
     }
 
