@@ -17,7 +17,9 @@ public class StreamReduceTest {
     @Test
     public void testStreamReduce() {
         List<Integer> integerList = Arrays.asList(1, 2, 3, 4);
-        Optional<Integer> integerProduct = integerList.stream().reduce((a, b) -> (a * b));
+        Optional<Integer> integerProduct = integerList.stream().reduce((Integer a, Integer b) -> {
+            return a * b;
+        });
         if (integerProduct.isPresent()) {
             System.out.println("4! = " + integerProduct.get());
         }

@@ -47,9 +47,11 @@ public class StreamMapTest {
         System.out.println();
 
         Stream<NamePhone> filteredNamePhoneStream = namePhoneEmailList.stream().filter
-                ((a) -> a.name.equalsIgnoreCase("a")).map((a) -> new NamePhone(a.name, a.phone));
+                ((a) -> a.name.equalsIgnoreCase("a")).map((NamePhoneEmail a) -> {
+            return new NamePhone(a.name, a.phone);
+        });
         System.out.println("List of names and phone numbers: ");
-        filteredNamePhoneStream.forEach((a) -> {
+        filteredNamePhoneStream.forEach((NamePhone a) -> {
             System.out.println(a.name + " " + a.phone);
         });
         System.out.println();
