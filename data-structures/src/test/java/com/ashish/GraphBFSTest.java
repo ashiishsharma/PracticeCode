@@ -136,7 +136,7 @@ public class GraphBFSTest {
                 System.out.println();
                 graphVertexSource = graphVertex;
             }
-            System.out.print(graphVertex.getVertexValue());
+            System.out.print(graphVertex.getVertexValue() + " ");
         } while (printQueue.getQueueCount() > 0);
     }
 }
