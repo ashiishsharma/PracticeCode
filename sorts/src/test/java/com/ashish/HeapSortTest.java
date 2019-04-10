@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
  * @author Ashish Sharma
  *         Created on 7/7/2015.
  *
- *         PriorityQueue are max Heap implementations only
+ *         PriorityQueue are min Heap implementations only
  */
 public class HeapSortTest {
 
