@@ -9,6 +9,10 @@ import java.util.HashMap;
 /**
  * @author Ashish Sharma
  *         Created on 8/16/2015.
+ *
+ *         Inorder tree traversal gives sorted values,
+ *         the pre-order traversal of a tree is unique, two trees are identical if they have the same
+ *         pre-order traversal
  */
 public class BinaryTreeOperationsTest {
 
