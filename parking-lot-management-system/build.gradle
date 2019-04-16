@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'tech.blueglacier'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile([group: 'com.google.guava', name: 'guava', version: '19.0'],
+            [group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'])
+    testCompile group: 'org.testng', name: 'testng', version: '6.9.10'
+}
+
+
+
+test {
+    useTestNG()
+    testLogging.showCauses = true;
+    testLogging.showExceptions = true;
+    testLogging.showStackTraces = true;
+    testLogging.showStandardStreams = true;
+    testLogging.exceptionFormat = 'full';
+    testLogging.events "started", "passed", "skipped", "failed", "standardOut", "standardError";
+}
