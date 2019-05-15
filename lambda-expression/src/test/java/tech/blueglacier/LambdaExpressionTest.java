@@ -42,13 +42,17 @@ public class LambdaExpressionTest {
 
     @Test
     public void testNumericTest() {
-        NumericTest isFactor = (n, d) -> (n % d) == 0;
+        NumericTest isFactor = (int n, int d) -> {
+            return (n % d) == 0;
+        };
 
         if (isFactor.test(10, 2)) {
             System.out.println("2 is factor of 10");
         }
 
-        NumericTest lessThan = (n, m) -> (n < m);
+        NumericTest lessThan = (int n, int m) -> {
+            return (n < m);
+        };
 
         if (lessThan.test(2, 10)) {
             System.out.println("2 is less than 10");
@@ -57,7 +61,7 @@ public class LambdaExpressionTest {
 
     @Test
     public void testBlockLambda() {
-        NumericFunc smallestFactor = (n) -> {
+        NumericFunc smallestFactor = (int n) -> {
             int result = 1;
 
             n = n < 0 ? -n : n;

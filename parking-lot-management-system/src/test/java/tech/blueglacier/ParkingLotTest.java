@@ -114,6 +114,7 @@ public class ParkingLotTest {
     @Test(priority = 12, description = "12")
     public void testUnparkVehicle() {
         parkingLot.unParkVehicle(bike1, exitGate1);
+
     }
 
 }
