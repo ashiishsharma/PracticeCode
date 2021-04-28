@@ -274,7 +274,7 @@ public class BinaryTreeOperationsTest {
     }
 
     @Test
-    public void biaryTreePredecessorTest() {
+    public void binaryTreePredecessorTest() {
         binaryTree = getBinaryTree2();
         BinaryTreeNode binaryTreeNode = binaryTree.getRoot();
 

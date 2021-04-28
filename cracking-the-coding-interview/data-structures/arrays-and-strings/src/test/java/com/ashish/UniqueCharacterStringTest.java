@@ -2,6 +2,9 @@ package com.ashish;
 
 import org.testng.annotations.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 1.1
  * <p>
@@ -41,4 +44,34 @@ public class UniqueCharacterStringTest {
 
         return containsUnique;
     }
+
+    @Test
+    public void uniqueCharacterStringSetSolution() {
+
+        String inputString = "ashish";
+        boolean characterUnique = isStringUniqueCharacteredSetSolution(inputString);
+        if (characterUnique) {
+            System.out.println("Input string contains all unique characters");
+        } else {
+            System.out.println("Input string does not contain all unique characters");
+        }
+    }
+
+    private boolean isStringUniqueCharacteredSetSolution(String inputString) {
+        boolean containsUnique = false;
+        if (inputString.length() <= 256) {
+            Set<Character> characterFlag = new HashSet<>();
+            for (char ch : inputString.toCharArray()) {
+                if (characterFlag.add(ch)) {
+                    containsUnique = true;
+                } else {
+                    containsUnique = false;
+                }
+            }
+        }
+
+        return containsUnique;
+    }
+
+
 }

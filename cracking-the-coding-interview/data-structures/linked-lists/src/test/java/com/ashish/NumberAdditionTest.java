@@ -106,7 +106,10 @@ public class NumberAdditionTest {
     /**
      * Solution for forward Order
      *
-     * Not implemented yet, will implement later
+     * Read the List and put the elements in a stack,pop the stack elements to create a reverse order list ,
+     * Use the solution described above.
+     * Again read the list returned as solution ( reverse order list ) using a stack ,
+     * pop out the elements to create a forward order list
      */
     @Test
     public void numberForwardAdditionTest() {
@@ -121,6 +124,22 @@ public class NumberAdditionTest {
         secondNumber.add(9);
         secondNumber.add(5);
 
+    }
+
+    @Test
+    /**
+     * Alternative solution
+     */
+    public void numberAdditionTestBetterSolution(){
+        /* Convert each linked list to regular integer by following algorithm :
+         6 -> 1 -> 7 in linked list = 6 * 100 + 1 * 10 + 7 = 617
+         2 -> 9 -> 5 in linked list = 2 * 100 + 9 * 10 + 5 = 295
+         Add the integers by regular 617 + 295 = 912
+         Now divide the resulting integer by 10 repeatedly , the remainder gives out the digits, : https://stackoverflow.com/questions/5196186/split-int-value-into-separate-digits
+         take the digits and create the linked list with that.
+         Alternatively, Convert the sum integer to a string , take out the character array out of the string for individual digits
+         and then create the linked list.
+        */
     }
 
 
