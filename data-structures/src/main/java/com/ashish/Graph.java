@@ -7,9 +7,13 @@ import java.util.Map;
 
 /**
  * @author Ashish Sharma
- *         Created on 8/22/2015.
+ * Created on 8/22/2015.
  */
 public class Graph {
+
+    private GraphVertex sourceGraphVertex;
+
+    private List<GraphVertex> graphNodes;
 
     public GraphVertex getSourceGraphVertex() {
         return sourceGraphVertex;
@@ -19,18 +23,12 @@ public class Graph {
         this.sourceGraphVertex = sourceGraphVertex;
     }
 
-    private GraphVertex sourceGraphVertex;
-
     public List<GraphVertex> getGraphNodes() {
         return graphNodes;
     }
-
-    private List<GraphVertex> graphNodes;
 
     public Graph(GraphVertex sourceGraphVertex) {
         graphNodes = new ArrayList<GraphVertex>();
         this.sourceGraphVertex = sourceGraphVertex;
     }
-
-
 }

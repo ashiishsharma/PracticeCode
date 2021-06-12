@@ -54,34 +54,11 @@ public class PlayingCardDeck {
     }
 
     private List<PlayingCard> getPlayingCards(PlayingCardType playingCardType) {
-        PlayingCard acePlayingCard = getPlayingCard(playingCardType, PlayingCardName.Ace);
-        PlayingCard twoPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Two);
-        PlayingCard threePlayingCard = getPlayingCard(playingCardType, PlayingCardName.Three);
-        PlayingCard fourPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Four);
-        PlayingCard fivePlayingCard = getPlayingCard(playingCardType, PlayingCardName.Five);
-        PlayingCard sixPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Six);
-        PlayingCard sevenPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Seven);
-        PlayingCard eightPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Eight);
-        PlayingCard ninePlayingCard = getPlayingCard(playingCardType, PlayingCardName.Nine);
-        PlayingCard tenPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Ten);
-        PlayingCard jackPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Jack);
-        PlayingCard queenPlayingCard = getPlayingCard(playingCardType, PlayingCardName.Queen);
-        PlayingCard kingPlayingCard = getPlayingCard(playingCardType, PlayingCardName.King);
-
         List playingCards = new ArrayList();
-        playingCards.add(acePlayingCard);
-        playingCards.add(twoPlayingCard);
-        playingCards.add(threePlayingCard);
-        playingCards.add(fourPlayingCard);
-        playingCards.add(fivePlayingCard);
-        playingCards.add(sixPlayingCard);
-        playingCards.add(sevenPlayingCard);
-        playingCards.add(eightPlayingCard);
-        playingCards.add(ninePlayingCard);
-        playingCards.add(tenPlayingCard);
-        playingCards.add(jackPlayingCard);
-        playingCards.add(queenPlayingCard);
-        playingCards.add(kingPlayingCard);
+        for(PlayingCardName playingCardName : PlayingCardName.values()){
+            PlayingCard playingCard = getPlayingCard(playingCardType, playingCardName);
+            playingCards.add(playingCard);
+        }
         return playingCards;
     }
 
